@@ -94,11 +94,13 @@ html{
     color: #ffeb00;
     transition-duration: 0.4s;
 }
-
 /*============ MAIN ============*/
 
 .main{
     background-color: var(--background-green);
+    position: relative;
+    min-height: 40vh;
+    border-radius: 0% 0% 25% 25%;
 }
 
 .container-main{
@@ -311,7 +313,6 @@ span{
     }
 
     /*============ MAIN ============*/
-
     .container-main{
         flex-direction: column;
         gap: 2.5rem;
@@ -356,15 +357,19 @@ span{
 
     /*============ SECTION - SERVICES ============*/
 
+    .subti{
+        font-size: 1.5rem;
+    }
+
     .grid-info{
-        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
         gap: 4rem;
     }
 
     .container-info{
         grid-template-columns: 1fr;
-        width: 250px;
-        height: 350px;
+        width: 200px;
+        height: 250px;
         background-color: #fff;
         overflow: hidden;
         border-radius: 0.5rem;
@@ -380,9 +385,18 @@ span{
     .p-info{
         font-size: 0.7rem;
         text-align: left;
-        margin-top: 30px;
-        margin-bottom: -50px;
-        padding: 0 0.5rem;
+        margin-bottom: -40px;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .one{
+        background-position: 50% -200%;
+        background-size: cover;
+    }
+
+    .three{
+        background-position: 50% 5%;
+        background-size: cover;
     }
     
     .li-huellita{
