@@ -29,7 +29,7 @@ html{
     position: sticky;
     top: 0;
     box-shadow: 0 0 10px #0000008a;
-    z-index: 10;
+    z-index: 20;
 }
 
 .logo{
@@ -70,7 +70,7 @@ html{
 .nav-link{
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .nav-item::after{
@@ -240,7 +240,7 @@ span{
     left: -50px;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 8rem;
+    gap: 10rem;
     z-index: -10;
 }
 
@@ -262,7 +262,7 @@ span{
     right: -50px;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 8rem;
+    gap: 10rem;
     z-index: -10;
 }
 
@@ -271,9 +271,152 @@ span{
     top: 20px;
     transform: rotate(-30deg);
 }
+
+.low{
+    margin-top: 50px;
+}
+/*============ SECTION - PRODUCTOS ============*/
+
+.productos{
+    padding: 8rem 4rem;
+    background-color: var(--background-green);
+    position: relative;
+}
+
+.contain-productos{
+    position: relative;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.slide-container{
+    margin-top: 2.5rem;
+    padding: 0.5rem;
+}
+
+.img-producto{
+    max-width: 100%;
+    width: 200px;
+}
+
+.swiper-button-next, .swiper-button-prev, .swiper-pagination{
+    color: #fff !important;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #fff !important;
+}
+.swiper-button-prev {
+    left: 60px !important;
+    /* filter: drop-shadow(0 1px 1px #000); */
+}
+
+.swiper-button-next {
+    right: 70px !important;
+    /* filter: drop-shadow(0 1px 1px #000); */
+}
+
+.custom-shape-divider-top-1717123540 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1717123540 svg {
+    position: relative;
+    display: block;
+    width: calc(171% + 1.3px);
+    height: 127px;
+}
+
+.custom-shape-divider-top-1717123540 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-bottom-1717123633 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1717123633 svg {
+    position: relative;
+    display: block;
+    width: calc(171% + 1.3px);
+    height: 127px;
+}
+
+.custom-shape-divider-bottom-1717123633 .shape-fill {
+    fill: #FFFFFF;
+}
+/*============ SECTION - CONTACTO ============*/
+.contactos{
+    position: relative;
+    overflow: hidden;
+}
+
+.container-contacto{
+    text-align: center;
+    padding: 5.5rem 4rem;
+    display: grid;
+    gap: 2.5rem;
+}
+
+.flex-subti-contact{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+    gap: 5rem;
+}
+
+.subit-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.map{
+    filter: grayscale(100%);
+    transition: 0.5s ease;
+}
+
+.map:hover{
+    filter: none;
+}
+
+.izquierda{
+    top: 2rem;
+}
+
+.derecha{
+    top: 2rem;
+}
+
+.subti-2{
+    position: relative;
+}
+
+.subti-2::after{
+    content: '';
+    width: 80px;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    background-color: #ffeb00;
+    border-radius: 15px;
+    left: 0;
+}
 /*============ MEDIA QUERIES ============*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     /*============ HEADER ============*/
 
@@ -419,5 +562,42 @@ span{
     .container-fondo-right{
         right: -35px;
         top: 50px;
+    }
+
+    .low{
+        margin-top: 0;
+    }
+
+    /*============ SECTION - PRODUCTOS ============*/
+    .swiper-button-prev {
+        left: 2px !important;
+    }
+    
+    .swiper-button-next {
+        right: 2px !important;
+    }
+    
+    .custom-shape-divider-top-1717123540 svg {
+        width: calc(213% + 1.3px);
+        height: 127px;
+    }
+
+    .custom-shape-divider-bottom-1717123633 svg {
+        width: calc(213% + 1.3px);
+        height: 127px;
+    }
+
+    /*============ SECTION - CONTACTO ============*/
+
+    .flex-subti-contact{
+        gap: 2rem
+    }
+
+    .subit-contact{
+        font-size: 0.8rem;
+    }
+
+    .container-contacto{
+        margin-bottom: -20px;
     }
 }
