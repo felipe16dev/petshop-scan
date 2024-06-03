@@ -98,7 +98,6 @@ html{
 .main{
     background-color: var(--background-green);
     position: relative;
-    min-height: 40vh;
     border-radius: 0% 0% 25% 25%;
 }
 
@@ -153,6 +152,9 @@ span{
     padding: 5.5rem 4rem;
     position: relative;
     overflow: hidden;
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
 }
 
 .container-services{
@@ -280,6 +282,9 @@ span{
     padding: 8rem 4rem;
     background-color: var(--background-green);
     position: relative;
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
 }
 
 .contain-productos{
@@ -359,6 +364,9 @@ span{
 .contactos{
     position: relative;
     overflow: hidden;
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
 }
 
 .container-contacto{
@@ -385,6 +393,9 @@ span{
 .map{
     filter: grayscale(100%);
     transition: 0.5s ease;
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
 }
 
 .map:hover{
@@ -712,5 +723,15 @@ span{
     
     .footer{
         font-size: 0.6rem;
+    }
+}
+
+@keyframes reveal {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
     }
 }
