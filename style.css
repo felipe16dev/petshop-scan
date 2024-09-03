@@ -116,6 +116,7 @@ html{
     width: 100%;
     color: #fff;
     margin-top: -60px;
+    animation: moveLeft 2s forwards;
 }
 
 h1{
@@ -135,6 +136,10 @@ span{
 .container-img{
     width: 100%;
     text-align: right;
+}
+
+.container-img img{
+    animation: moveRight 2s forwards;
 }
 
 .main-img{
@@ -730,12 +735,36 @@ span{
     }
 }
 
+/*============ ANIMACIONES ============*/
+
 @keyframes reveal {
     from{
         opacity: 0;
     }
 
     to{
+        opacity: 1;
+    }
+}
+
+@keyframes moveRight {
+    from{
+        transform: translateX(120px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    from{
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
         opacity: 1;
     }
 }
